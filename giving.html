@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giving – St. Angela Merici Catholic Church – Bronx, NY</title>
+  <meta name="description" content="Ways to support St. Angela Merici Catholic Church in the Bronx, NY — regular donations and capital campaigns.">
+  <meta name="theme-color" content="#4b345f">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <!-- HEADER + NAVIGATION -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo-purple.png" alt="St. Angela Merici parish logo">
+        <div class="brand-text">
+          <h1>St. Angela Merici Catholic Church</h1>
+          <p data-i18n="brand.tag">Bronx, New York</p>
+        </div>
+      </div>
+      <div class="lang-switcher" role="group" aria-label="Language" data-i18n-aria="lang.label">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" data-i18n-aria="nav.toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span></label>
+      <nav class="navbar" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="ministries.html" data-i18n="nav.ministries">Ministries</a></li>
+          <li><a href="sacraments.html" data-i18n="nav.sacraments">Sacraments</a></li>
+          <li><a href="youth.html" data-i18n="nav.youth">Youth Corner</a></li>
+          <li><a href="readings.html" data-i18n="nav.readings">Daily Readings</a></li>
+          <li><a href="staff.html" data-i18n="nav.staff">Staff</a></li>
+          <li><a href="council.html" data-i18n="nav.council">Parish Council</a></li>
+          <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+          <li><a href="albums.html" data-i18n="nav.albums">Photo Albums</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="catholic-links.html" data-i18n="nav.links">Catholic Links</a></li>
+          <li><a href="giving.html" aria-current="page" data-i18n="nav.giving">Giving</a></li>
+          <li><a href="events.html" data-i18n="nav.events">Events</a></li>
+          <li><a href="news.html" data-i18n="nav.news">News</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="giving">
+      <h2 data-i18n="pg.giv.title">Giving</h2>
+      <p data-i18n="pg.giv.sub">Your generosity keeps our parish alive.</p>
+    </section>
+    <!-- VERSE -->
+    <section class="section" aria-label="Scripture">
+      <p class="center pg-lead" data-i18n="pg.giv.verse">&ldquo;God loves a cheerful giver.&rdquo; &mdash; 2 Corinthians 9:7</p>
+    </section>
+
+    <!-- WAYS TO GIVE -->
+    <section class="section-light" aria-label="Ways to give">
+      <div class="pg-grid">
+        <div class="pg-card">
+          <div class="pg-ico" aria-hidden="true">&#10084;</div>
+          <h3 data-i18n="pg.giv.reg.t">Regular Donations</h3>
+          <p data-i18n="pg.giv.reg.p">Your weekly offering at Sunday Mass supports the daily life of our parish.</p>
+        </div>
+        <div class="pg-card">
+          <div class="pg-ico" aria-hidden="true">&#127963;</div>
+          <h3 data-i18n="pg.giv.cap.t">Capital Campaign</h3>
+          <p data-i18n="pg.giv.cap.p">From time to time our parish undertakes special campaigns to restore and improve our church buildings.</p>
+        </div>
+      </div>
+      <p class="center" style="margin-top:1.5rem"><a class="btn" href="contact.html" data-i18n="pg.giv.cta">Contact the Parish Office: (718) 293-0984</a></p>
+    </section>
+
+  <footer class="footer">
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#mass-times" data-i18n="mass.title">Mass Times</a></li>
+        <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; <span id="year">2026</span> St. Angela Merici Catholic Church &bull; 917 Morris Avenue, Bronx, NY</p>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
