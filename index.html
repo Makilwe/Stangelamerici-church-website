@@ -4,282 +4,268 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>St. Angela Merici Catholic Church – Bronx, NY</title>
+  <meta name="description" content="St. Angela Merici Catholic Church in the Bronx, NY — Mass times, sacraments, ministries, bulletins, and parish life. All are welcome.">
+  <meta name="theme-color" content="#4b345f">
+  <meta property="og:title" content="St. Angela Merici Catholic Church – Bronx, NY">
+  <meta property="og:description" content="A joyful, welcoming Catholic community in the Bronx. Mass times, sacraments, ministries, and more.">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
-  <!-- HEADER -->
+  <!-- HEADER + NAVIGATION -->
   <header class="header">
-    <h1>St. Angela Merici Catholic Church</h1>
-    <p>Bronx, New York</p>
+    <div class="header-inner">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo-purple.png" alt="St. Angela Merici parish logo">
+        <div class="brand-text">
+          <h1>St. Angela Merici Catholic Church</h1>
+          <p data-i18n="brand.tag">Bronx, New York</p>
+        </div>
+      </div>
+      <div class="lang-switcher" role="group" aria-label="Language" data-i18n-aria="lang.label">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" data-i18n-aria="nav.toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span></label>
+      <nav class="navbar" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="ministries.html" data-i18n="nav.ministries">Ministries</a></li>
+          <li><a href="sacraments.html" data-i18n="nav.sacraments">Sacraments</a></li>
+          <li><a href="youth.html" data-i18n="nav.youth">Youth Corner</a></li>
+          <li><a href="readings.html" data-i18n="nav.readings">Daily Readings</a></li>
+          <li><a href="staff.html" data-i18n="nav.staff">Staff</a></li>
+          <li><a href="council.html" data-i18n="nav.council">Parish Council</a></li>
+          <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+          <li><a href="albums.html" data-i18n="nav.albums">Photo Albums</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="catholic-links.html" data-i18n="nav.links">Catholic Links</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!--Navigation-->
-  <nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="ministries.html">Ministries</a></li>
-    <li><a href="youth.html">Youth Corner</a></li>
-    <li><a href="readings.html">Daily Readings</a></li>
-    <li><a href="staff.html">Staff</a></li>
-    <li><a href="council.html">Parish Council</a></li>
-    <li><a href="bulletins.html">Bulletins</a></li>
-    <li><a href="catholic-links.html">Catholic Links</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-  <!-- HERO -->
-<section class="hero">
-  <picture>
-    <source srcset="assets/images/altar-optimized.jpg" type="image/jpeg">
-    <img src="assets/images/altar-optimized.jpg" alt="Altar" class="hero-img" loading="lazy">
-  </picture>
-  <div class="hero-overlay">
-    <h2>Welcome to Our Parish</h2>
-    <p>“Taste and see that the Lord is good.” — Psalm 34:8</p>
-  </div>
-</section>
-
-
-  <!-- HOME PAGE MENU ICONS -->
-  <section class="menu-icons">
-  <a href="about.html" class="menu-card">
-    <div class="menu-icon">📖</div>
-    <p>About</p>
-  </a>
-
-  <a href="ministries.html" class="menu-card">
-    <div class="menu-icon">⛪</div>
-    <p>Ministries</p>
-  </a>
-
-  <a href="youth.html" class="menu-card">
-    <div class="menu-icon">👦👧</div>
-    <p>Youth Corner</p>
-  </a>
-
-  <a href="readings.html" class="menu-card">
-    <div class="menu-icon">📜</div>
-    <p>Daily Readings</p>
-  </a>
-
-  <a href="sacraments.html" class="menu-card">
-    <div class="menu-icon">✝️</div>
-    <p>Sacraments</p>
-  </a>
-
-  <a href="council.html" class="menu-card">
-    <div class="menu-icon">👥</div>
-    <p>Parish Council</p>
-  </a>
-
-<a href="staff.html" class="menu-card">
-  <div class="menu-icon">👤</div>
-  <p>Staff</p>
-</a>
-
-<a href="catholic-links.html" class="menu-card">
-  <div class="menu-icon">🌐</div>
-  <p>Catholic Links</p>
-</a>
-
-<a href="bulletins.html" class="menu-card">
-  <div class="menu-icon">📰</div>
-  <p>Bulletins</p>
-</a>
-
-<a href="projects.html" class="menu-card">
-  <div class="menu-icon">🏗️</div>
-  <p>Projects</p>
-</a>
-
-<a href="albums.html" class="menu-card">
-  <div class="menu-icon">📷</div>
-  <p>Photo Albums</p>
-</a>
-
-  <a href="contact.html" class="menu-card">
-    <div class="menu-icon">📞</div>
-    <p>Contact</p>
-  </a>
-</section>
-
-<!-- LATEST NEWS / VATICAN NEWS -->
-<section class="vatican-news">
-  <h2 class="center">Latest News from the Vatican</h2>
-  <p class="center">
-    Stay connected with the global Catholic Church.  
-    Click below to read official news from Vatican News.
-  </p>
-
-  <div class="news-button">
-    <a href="https://www.vaticannews.va/en.html" target="_blank">
-      Visit Vatican News
-    </a>
-  </div>
-</section>
-
-<!-- PHOTO GALLERY -->
-<section class="photo-gallery">
-  <h2 class="center">Photo Gallery</h2>
-  <p class="center">Moments from our parish life.</p>
-
-  <div class="gallery-grid">
-    <img src="assets/images/chalice.jpg" alt="Chalice" class="gallery-img">
-    <img src="assets/images/entrance.jpg" alt="Church Entrance" class="gallery-img">
-    <img src="assets/images/altar.jpg" alt="Altar" class="gallery-img">
-    <img src="assets/images/vestments.jpg" alt="Vestments" class="gallery-img">
-  </div>
-</section>
-
-<!-- WELCOME MESSAGE -->
-<section class="welcome-message">
-  <h2 class="center">Welcome to St. Angela Merici Catholic Church</h2>
-
-  <p class="center">
-    We are a joyful, welcoming Catholic community in the Bronx, united in faith and committed
-    to living the Gospel of Jesus Christ. Whether you are new to the parish, returning to the Church,
-    or simply seeking a place to pray, you are always welcome here.
-  </p>
-
-  <p class="center">
-    May the peace of Christ fill your heart, and may you find in our parish a spiritual home
-    where you can grow in faith, hope, and love.
-  </p>
-</section>
-
-
-<!-- DAILY GOSPEL & THOUGHT FOR THE DAY -->
-<section class="daily-gospel">
-  <h2 class="center">Gospel & Thought for the Day</h2>
-  <p class="center">
-    Nourish your spirit with today’s Gospel reading and reflection from Vatican News.
-  </p>
-
-  <div class="gospel-button">
-    <a href="https://www.vaticannews.va/en/word-of-the-day.html" target="_blank">
-      Read Today’s Gospel
-    </a>
-  </div>
-</section>
-
-
-  <!-- MASS TIMES -->
-  <section class="section">
-    <h2 class="center">Mass Times</h2>
-    <div class="grid-3">
-
-      <div class="card">
-        <h3>Saturday</h3>
-        <p>7:00 AM — Bilingual</p>
-        <p>5:30 PM — English</p>
-        <p>7:30 PM — Spanish</p>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-label="Welcome">
+      <img src="assets/images/altar.jpg" alt="The altar of St. Angela Merici Catholic Church" data-i18n-alt="hero.imgalt" class="hero-img" fetchpriority="high">
+      <div class="hero-overlay">
+        <h2 data-i18n="hero.title">Welcome to Our Parish</h2>
+        <p data-i18n="hero.verse">&ldquo;Taste and see that the Lord is good.&rdquo; &mdash; Psalm 34:8</p>
+        <a href="#mass-times" class="btn btn-light" data-i18n="hero.cta">View Mass Times</a>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Sunday</h3>
-        <p>8:00 AM — Spanish</p>
-        <p>9:30 AM — English</p>
-        <p>11:00 AM — Spanish</p>
+    <!-- QUICK LINKS -->
+    <section class="menu-icons" aria-label="Quick links">
+      <a href="about.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#128214;</div>
+        <p data-i18n="nav.about">About</p>
+      </a>
+      <a href="ministries.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#9962;</div>
+        <p data-i18n="nav.ministries">Ministries</p>
+      </a>
+      <a href="youth.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#128102;&#8205;&#128103;</div>
+        <p data-i18n="nav.youth">Youth Corner</p>
+      </a>
+      <a href="readings.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#128220;</div>
+        <p data-i18n="nav.readings">Daily Readings</p>
+      </a>
+      <a href="sacraments.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#10013;&#65039;</div>
+        <p data-i18n="nav.sacraments">Sacraments</p>
+      </a>
+      <a href="council.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#128101;</div>
+        <p data-i18n="nav.council">Parish Council</p>
+      </a>
+      <a href="staff.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#128100;</div>
+        <p data-i18n="nav.staff">Staff</p>
+      </a>
+      <a href="catholic-links.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#127760;</div>
+        <p data-i18n="nav.links">Catholic Links</p>
+      </a>
+      <a href="bulletins.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#128240;</div>
+        <p data-i18n="nav.bulletins">Bulletins</p>
+      </a>
+      <a href="projects.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#128679;</div>
+        <p data-i18n="nav.projects">Projects</p>
+      </a>
+      <a href="albums.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#128247;</div>
+        <p data-i18n="nav.albums">Photo Albums</p>
+      </a>
+      <a href="contact.html" class="menu-card">
+        <div class="menu-icon" aria-hidden="true">&#128222;</div>
+        <p data-i18n="nav.contact">Contact</p>
+      </a>
+    </section>
+
+    <!-- VATICAN NEWS -->
+    <section class="vatican-news">
+      <h2 class="center" data-i18n="vat.title">Latest News from the Vatican</h2>
+      <p class="center" data-i18n="vat.text">Stay connected with the global Catholic Church. Read official news from Vatican News.</p>
+      <p class="center"><a class="btn" href="https://www.vaticannews.va/en.html" target="_blank" rel="noopener" data-i18n="vat.btn">Visit Vatican News</a></p>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section class="photo-gallery">
+      <h2 class="center" data-i18n="gal.title">Photo Gallery</h2>
+      <p class="center" data-i18n="gal.sub">Moments from our parish life.</p>
+      <div class="gallery-grid">
+        <img src="assets/images/chalice.jpg" alt="Chalice used at Mass" data-i18n-alt="gal.alt1" class="gallery-img" loading="lazy">
+        <img src="assets/images/entrance.jpg" alt="Church entrance" data-i18n-alt="gal.alt2" class="gallery-img" loading="lazy">
+        <img src="assets/images/altar.jpg" alt="Altar decorated for celebration" data-i18n-alt="gal.alt3" class="gallery-img" loading="lazy">
+        <img src="assets/images/vestments.jpg" alt="Liturgical vestments" data-i18n-alt="gal.alt4" class="gallery-img" loading="lazy">
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Weekdays</h3>
-        <p>Mon–Fri: 1:00 PM — English</p>
-        <p>Thursday: 7:30 PM — Spanish</p>
+    <!-- WELCOME -->
+    <section class="welcome-message section-light">
+      <h2 class="center" data-i18n="wel.title">Welcome to St. Angela Merici Catholic Church</h2>
+      <p class="center" data-i18n="wel.p1">
+        We are a joyful, welcoming Catholic community in the Bronx, united in faith and committed
+        to living the Gospel of Jesus Christ. Whether you are new to the parish, returning to the Church,
+        or simply seeking a place to pray, you are always welcome here.
+      </p>
+      <p class="center" data-i18n="wel.p2">
+        Here you will find information about our parish community, the celebration of the Sacred Liturgy
+        and the Sacraments, parish ministries, faith formation, and opportunities to grow in your
+        relationship with Jesus Christ.
+      </p>
+      <p class="center" data-i18n="wel.p3">
+        May the peace of Christ fill your heart, and may you find in our parish a spiritual home
+        where you can grow in faith, hope, and love.
+      </p>
+    </section>
+
+    <!-- DAILY GOSPEL -->
+    <section class="daily-gospel">
+      <h2 class="center" data-i18n="gos.title">Gospel &amp; Thought for the Day</h2>
+      <p class="center" data-i18n="gos.text">Nourish your spirit with today&rsquo;s Gospel reading and reflection.</p>
+      <p class="center"><a class="btn" href="https://www.vaticannews.va/en/word-of-the-day.html" target="_blank" rel="noopener" data-i18n="gos.btn">Read Today&rsquo;s Gospel</a></p>
+    </section>
+
+    <!-- MASS TIMES -->
+    <section class="section" id="mass-times">
+      <h2 class="center" data-i18n="mass.title">Mass Times</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3 data-i18n="mass.sat">Saturday</h3>
+          <p data-i18n="mass.sat1">7:00 AM &mdash; Bilingual</p>
+          <p data-i18n="mass.sat2">5:30 PM &mdash; English</p>
+          <p data-i18n="mass.sat3">7:30 PM &mdash; Spanish</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="mass.sun">Sunday</h3>
+          <p data-i18n="mass.sun1">8:00 AM &mdash; Spanish</p>
+          <p data-i18n="mass.sun2">9:30 AM &mdash; English</p>
+          <p data-i18n="mass.sun3">11:00 AM &mdash; Spanish</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="mass.week">Weekdays</h3>
+          <p data-i18n="mass.wd1">Mon&ndash;Fri: 1:00 PM &mdash; Bilingual</p>
+          <p data-i18n="mass.wd2">Thursday: 7:30 PM &mdash; Bilingual</p>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- PARISH EVENTS -->
+    <section class="parish-events section-light">
+      <h2 class="center" data-i18n="ev.title">Upcoming Parish Events</h2>
+      <p class="center" data-i18n="ev.sub">Join us in prayer, fellowship, and community life.</p>
+      <div class="events-grid">
+        <div class="event-card">
+          <h3 data-i18n="ev.e1t">Sunday Fellowship</h3>
+          <p data-i18n="ev.e1d">Every Sunday after the 11:00 AM Mass</p>
+          <p data-i18n="ev.e1p">Parish Hall</p>
+        </div>
+        <div class="event-card">
+          <h3 data-i18n="ev.e2t">Youth Group Meeting</h3>
+          <p data-i18n="ev.e2d">Fridays &bull; 6:00 PM</p>
+          <p data-i18n="ev.e2p">Lower Church</p>
+        </div>
+        <div class="event-card">
+          <h3 data-i18n="ev.e3t">Bible Study</h3>
+          <p data-i18n="ev.e3d">Wednesdays &bull; 7:00 PM</p>
+          <p data-i18n="ev.e3p">Rectory Meeting Room</p>
+        </div>
+      </div>
+    </section>
 
-<!-- PARISH EVENTS -->
-<section class="parish-events">
-  <h2 class="center">Upcoming Parish Events</h2>
-  <p class="center">Join us in prayer, fellowship, and community life.</p>
+    <!-- CONFESSION -->
+    <section class="section">
+      <h2 class="center" data-i18n="con.title">Confession Times</h2>
+      <p class="center" data-i18n="con.text">Saturday: 4:00 PM &ndash; 5:00 PM<br>Or by appointment</p>
+    </section>
 
-  <div class="events-grid">
+    <!-- PARISH HISTORY -->
+    <section class="section-light">
+      <h2 class="center" data-i18n="his.title">Our History</h2>
+      <p class="center" data-i18n="his.text">
+        Founded in 1899, St. Angela Merici Catholic Church has faithfully served the people of the Bronx for
+        more than a century. Through changing times, our parish has remained a place of prayer, worship, and
+        service, welcoming generations of families to encounter Christ through the Eucharist, the Sacraments,
+        and the life of the Church.
+      </p>
+    </section>
 
-    <div class="event-card">
-      <h3>Sunday Fellowship</h3>
-      <p>Every Sunday after the 11:00 AM Mass</p>
-      <p>Parish Hall</p>
-    </div>
+    <!-- PATRONESS -->
+    <section class="section">
+      <h2 class="center" data-i18n="pat.title">St. Angela Merici</h2>
+      <p class="center" data-i18n="pat.text">
+        St. Angela Merici (1474&ndash;1540) was an Italian educator, mystic, and the foundress of the Company of
+        St. Ursula, dedicated to the Christian education and formation of young women. Guided by deep faith,
+        wisdom, and charity, she believed that education rooted in the Gospel could transform both individuals
+        and society. Her example continues to inspire our parish.
+      </p>
+    </section>
 
-    <div class="event-card">
-      <h3>Youth Group Meeting</h3>
-      <p>Fridays • 6:00 PM</p>
-      <p>Lower Church</p>
-    </div>
-
-    <div class="event-card">
-      <h3>Bible Study</h3>
-      <p>Wednesdays • 7:00 PM</p>
-      <p>Rectory Meeting Room</p>
-    </div>
-
-  </div>
-</section>
-
-
-
-  <!-- CONFESSION -->
-  <section class="section-light">
-    <h2 class="center">Confession Times</h2>
-    <p class="center">Saturday: 4:00 PM – 5:00 PM<br>Or by appointment</p>
-  </section>
-
-  <!-- WELCOME -->
-  <section class="section">
-    <h2 class="center">Welcome Message</h2>
-    <p class="center">
-      Welcome to St. Angela Merici Catholic Church. We are delighted to welcome you to our parish website.
-      Here you will find information about our parish community, the celebration of the Sacred Liturgy and
-      the Sacraments, parish ministries, faith formation, and opportunities to grow in your relationship
-      with Jesus Christ. Whether you are a long-time parishioner, new to our community, or simply visiting,
-      we warmly invite you to join us in prayer, worship, and fellowship.
-    </p>
-  </section>
-
-  <!-- PARISH HISTORY -->
-  <section class="section-light">
-    <h2 class="center">Our History</h2>
-    <p class="center">
-      Founded in 1899, St. Angela Merici Catholic Church has faithfully served the people of the Bronx for
-      more than a century. Through changing times, our parish has remained a place of prayer, worship, and
-      service, welcoming generations of families to encounter Christ through the Eucharist, the Sacraments,
-      and the life of the Church.
-    </p>
-  </section>
-
-  <!-- PATRONESS -->
-  <section class="section">
-    <h2 class="center">St. Angela Merici</h2>
-    <p class="center">
-      St. Angela Merici (1474–1540) was an Italian educator, mystic, and the foundress of the Company of
-      St. Ursula, dedicated to the Christian education and formation of young women. Guided by deep faith,
-      wisdom, and charity, she believed that education rooted in the Gospel could transform both individuals
-      and society. Her example continues to inspire our parish.
-    </p>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section-light">
-    <h2 class="center">Contact Us</h2>
-    <p class="center">
-      St. Angela Merici Catholic Church<br>
-      917 Morris Avenue, Bronx, NY<br>
-      (718) 293-0984<br>
-      saintangelamerici@yahoo.com
-    </p>
-  </section>
+    <!-- CONTACT -->
+    <section class="section-light">
+      <h2 class="center" data-i18n="ctc.title">Contact Us</h2>
+      <address class="center">
+        St. Angela Merici Catholic Church<br>
+        917 Morris Avenue, Bronx, NY<br>
+        <a href="tel:+17182930984">(718) 293-0984</a><br>
+        <a href="mailto:saintangelamerici@yahoo.com">saintangelamerici@yahoo.com</a>
+      </address>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© St. Angela Merici Catholic Church • Bronx, NY</p>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="#mass-times" data-i18n="mass.title">Mass Times</a></li>
+        <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; <span id="year">2026</span> St. Angela Merici Catholic Church &bull; 917 Morris Avenue, Bronx, NY</p>
   </footer>
 
+  <script src="i18n.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
