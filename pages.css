@@ -223,3 +223,36 @@ a.link-card:hover .link-go { color: var(--gold-dark); }
   text-align: center; color: var(--muted);
   font-size: 0.9rem; margin-top: 0.6rem;
 }
+
+/* ---------- Honoree spotlight ---------- */
+.honoree {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 860px;
+  margin-inline: auto;
+  flex-wrap: wrap;
+}
+.honoree-photo {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--gold);
+  flex: none;
+}
+.honoree-text { flex: 1 1 320px; }
+.honoree-text h3 { margin-top: 0; }
+.honoree-text blockquote {
+  border-left: 4px solid var(--gold);
+  margin: 1rem 0 0;
+  padding: 0.5rem 0 0.5rem 1rem;
+  font-style: italic;
+  color: var(--navy);
+}
+.pg-verse {
+  font-style: italic;
+  opacity: 0.95;
+  margin-top: 0.75rem;
+}
