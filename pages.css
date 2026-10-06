@@ -98,6 +98,16 @@
   letter-spacing: 0.04em;
 }
 
+.staff-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  display: block;
+  margin: 0 auto 0.75rem;
+}
+
 .staff-card h3 {
   margin: 0 0 0.2rem;
   font-size: 1.1rem;
