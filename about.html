@@ -3,63 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Our Parish – St. Angela Merici</title>
+  <title>About – St. Angela Merici Catholic Church – Bronx, NY</title>
+  <meta name="description" content="About St. Angela Merici Catholic Church in the Bronx, NY — our history, our mission, and our patroness. All are welcome.">
+  <meta name="theme-color" content="#4b345f">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
-<header class="header">
-  <h1>St. Angela Merici Catholic Church</h1>
-  <p>Bronx, New York</p>
-</header>
+  <!-- HEADER + NAVIGATION -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo-purple.png" alt="St. Angela Merici parish logo">
+        <div class="brand-text">
+          <h1>St. Angela Merici Catholic Church</h1>
+          <p data-i18n="brand.tag">Bronx, New York</p>
+        </div>
+      </div>
+      <div class="lang-switcher" role="group" aria-label="Language" data-i18n-aria="lang.label">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" data-i18n-aria="nav.toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span></label>
+      <nav class="navbar" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" aria-current="page" data-i18n="nav.about">About</a></li>
+          <li><a href="ministries.html" data-i18n="nav.ministries">Ministries</a></li>
+          <li><a href="sacraments.html" data-i18n="nav.sacraments">Sacraments</a></li>
+          <li><a href="youth.html" data-i18n="nav.youth">Youth Corner</a></li>
+          <li><a href="readings.html" data-i18n="nav.readings">Daily Readings</a></li>
+          <li><a href="staff.html" data-i18n="nav.staff">Staff</a></li>
+          <li><a href="council.html" data-i18n="nav.council">Parish Council</a></li>
+          <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+          <li><a href="albums.html" data-i18n="nav.albums">Photo Albums</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="catholic-links.html" data-i18n="nav.links">Catholic Links</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="ministries.html">Ministries</a></li>
-    <li><a href="youth.html">Youth Corner</a></li>
-    <li><a href="readings.html">Daily Readings</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <main id="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="About our parish">
+      <h2 data-i18n="pg.about.title">About Our Parish</h2>
+      <p data-i18n="pg.about.sub">A century of faith in the Bronx.</p>
+    </section>
 
-<section class="section">
-  <h2 class="center">About Our Parish</h2>
-  <img src="assets/images/altar.jpg" alt="Church Altar" class="about-img">
+    <!-- WELCOME -->
+    <section class="section" aria-label="Welcome">
+      <h2 class="center" data-i18n="pg.about.wel.t">Welcome Home</h2>
+      <p class="center" data-i18n="wel.p1">
+        We are a joyful, welcoming Catholic community in the Bronx, united in faith and committed
+        to living the Gospel of Jesus Christ. Whether you are new to the parish, returning to the Church,
+        or simply seeking a place to pray, you are always welcome here.
+      </p>
+      <p class="center" data-i18n="wel.p2">
+        Here you will find information about our parish community, the celebration of the Sacred Liturgy
+        and the Sacraments, parish ministries, faith formation, and opportunities to grow in your
+        relationship with Jesus Christ.
+      </p>
+      <figure class="about-photo">
+        <img src="assets/images/photoB.jpg" alt="St. Angela Merici Church building in the Bronx" loading="lazy">
+        <figcaption>Our parish home on Morris Avenue, Bronx</figcaption>
+      </figure>
+    </section>
 
-  <p class="center">
-    St. Angela Merici Catholic Church is a welcoming parish where people of every age and background
-    are invited to deepen their relationship with Jesus Christ. Through the celebration of the Eucharist,
-    the Sacraments, prayer, faith formation, and works of charity, we seek to build a community rooted
-    in the Gospel and united in the love of God.
-  </p>
-</section>
+    <!-- MISSION -->
+    <section class="section-light" aria-label="Our mission">
+      <h2 class="center" data-i18n="pg.about.mission.t">Our Mission</h2>
+      <p class="center pg-lead" data-i18n="pg.about.mission.p">
+        To be a joyful, welcoming Catholic community in the Bronx &mdash; proclaiming the Gospel,
+        celebrating the sacraments, and serving our neighbors with love.
+      </p>
+    </section>
 
-<section class="section-light">
-  <h2 class="center">Our History</h2>
-  <p class="center">
-    Founded in 1899, St. Angela Merici Catholic Church has faithfully served the people of the Bronx
-    for more than a century. Through changing times, our parish has remained a place of prayer, worship,
-    and service, welcoming generations of families to encounter Christ through the Eucharist, the
-    Sacraments, and the life of the Church.
-  </p>
-</section>
+    <!-- PARISH FACTS -->
+    <section class="section" aria-label="Parish facts">
+      <h2 class="center" data-i18n="pg.about.facts.t">Parish Facts</h2>
+      <dl class="fact-rows">
+        <div class="fact-row">
+          <dt data-i18n="pg.about.f1">Founded</dt>
+          <dd data-i18n="pg.about.f1v">1899</dd>
+        </div>
+        <div class="fact-row">
+          <dt data-i18n="pg.about.f2">Archdiocese</dt>
+          <dd data-i18n="pg.about.f2v">Archdiocese of New York</dd>
+        </div>
+        <div class="fact-row">
+          <dt data-i18n="pg.about.f3">Served by</dt>
+          <dd data-i18n="pg.about.f3v">The Apostles of Jesus since 2000</dd>
+        </div>
+        <div class="fact-row">
+          <dt data-i18n="pg.about.f4">Address</dt>
+          <dd data-i18n="pg.about.f4v">917 Morris Avenue, Bronx, NY 10451</dd>
+        </div>
+      </dl>
+    </section>
 
-<section class="section">
-  <h2 class="center">Our Patroness – St. Angela Merici</h2>
-  <p class="center">
-    St. Angela Merici (1474–1540) was an Italian educator, mystic, and the foundress of the Company of
-    St. Ursula, dedicated to the Christian education and formation of young women. Guided by deep faith,
-    wisdom, and charity, she believed that education rooted in the Gospel could transform both individuals
-    and society. Her example continues to inspire our parish as we seek to grow in faith, hope, and love.
-  </p>
-</section>
+    <!-- HISTORY -->
+    <section class="section-light" aria-label="Our history">
+      <h2 class="center" data-i18n="his.title">Our History</h2>
+      <p class="center" data-i18n="his.text">
+        Founded in 1899, St. Angela Merici Catholic Church has faithfully served the people of the Bronx for
+        more than a century. Through changing times, our parish has remained a place of prayer, worship, and
+        service, welcoming generations of families to encounter Christ through the Eucharist, the Sacraments,
+        and the life of the Church.
+      </p>
+    </section>
 
-<footer class="footer">
-  <p>© St. Angela Merici Catholic Church • Bronx, NY</p>
-</footer>
+    <!-- PATRONESS -->
+    <section class="section" aria-label="Our patroness">
+      <h2 class="center" data-i18n="pat.title">St. Angela Merici</h2>
+      <p class="center" data-i18n="pat.text">
+        St. Angela Merici (1474&ndash;1540) was an Italian educator, mystic, and the foundress of the Company of
+        St. Ursula, dedicated to the Christian education and formation of young women. Guided by deep faith,
+        wisdom, and charity, she believed that education rooted in the Gospel could transform both individuals
+        and society. Her example continues to inspire our parish.
+      </p>
+      <p class="center"><a class="btn" href="index.html#mass-times" data-i18n="mass.title">Mass Times</a></p>
+    </section>
+  </main>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#mass-times" data-i18n="mass.title">Mass Times</a></li>
+        <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; <span id="year">2026</span> St. Angela Merici Catholic Church &bull; 917 Morris Avenue, Bronx, NY</p>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

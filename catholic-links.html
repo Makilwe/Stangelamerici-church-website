@@ -3,82 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catholic Links – St. Angela Merici Catholic Church</title>
+  <title>Catholic Links – St. Angela Merici Catholic Church – Bronx, NY</title>
+  <meta name="description" content="Trusted Catholic links from St. Angela Merici Catholic Church in the Bronx, NY — the Vatican, USCCB, Archdiocese of New York, daily readings, and more.">
+  <meta name="theme-color" content="#4b345f">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
-  <!-- HEADER -->
+  <!-- HEADER + NAVIGATION -->
   <header class="header">
-    <h1>Catholic Links</h1>
-    <p>Resources for Faith, Prayer, and Catholic Teaching</p>
+    <div class="header-inner">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo-purple.png" alt="St. Angela Merici parish logo">
+        <div class="brand-text">
+          <h1>St. Angela Merici Catholic Church</h1>
+          <p data-i18n="brand.tag">Bronx, New York</p>
+        </div>
+      </div>
+      <div class="lang-switcher" role="group" aria-label="Language" data-i18n-aria="lang.label">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" data-i18n-aria="nav.toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span></label>
+      <nav class="navbar" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="ministries.html" data-i18n="nav.ministries">Ministries</a></li>
+          <li><a href="sacraments.html" data-i18n="nav.sacraments">Sacraments</a></li>
+          <li><a href="youth.html" data-i18n="nav.youth">Youth Corner</a></li>
+          <li><a href="readings.html" data-i18n="nav.readings">Daily Readings</a></li>
+          <li><a href="staff.html" data-i18n="nav.staff">Staff</a></li>
+          <li><a href="council.html" data-i18n="nav.council">Parish Council</a></li>
+          <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+          <li><a href="albums.html" data-i18n="nav.albums">Photo Albums</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="catholic-links.html" aria-current="page" data-i18n="nav.links">Catholic Links</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- NAVIGATION -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="ministries.html">Ministries</a></li>
-      <li><a href="youth.html">Youth Corner</a></li>
-      <li><a href="readings.html">Daily Readings</a></li>
-      <li><a href="staff.html">Staff</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="catholic-links.html">Catholic Links</a></li>
-    </ul>
-  </nav>
+  <main id="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Catholic links">
+      <h2 data-i18n="pg.lnk.title">Catholic Links</h2>
+      <p data-i18n="pg.lnk.sub">Faith resources around the web.</p>
+    </section>
 
-  <!-- CONTENT -->
-  <section class="section">
-    <h2 class="center">Official Catholic Resources</h2>
-    <p class="center">Explore trusted Catholic websites for prayer, news, teachings, and spiritual growth.</p>
+    <!-- LINKS -->
+    <section class="section" aria-label="Recommended links">
+      <p class="center pg-lead" data-i18n="pg.lnk.intro">
+        Trusted Catholic resources for prayer, learning, and staying connected with the wider Church.
+      </p>
 
-    <div class="links-list">
-
-      <div class="link-card">
-        <h3>The Vatican</h3>
-        <p>Official website of the Holy See.</p>
-        <a href="https://www.vatican.va/content/vatican/en.html" target="_blank">Visit Website</a>
+      <div class="pg-grid">
+        <a class="pg-card link-card" href="https://www.vatican.va" target="_blank" rel="noopener">
+          <div class="pg-ico" aria-hidden="true">&#10013;</div>
+          <h3 data-i18n="pg.lnk.l1t">The Vatican</h3>
+          <p data-i18n="pg.lnk.l1d">The official website of the Holy See.</p>
+          <span class="link-go" data-i18n="pg.lnk.go">Visit site &rarr;</span>
+        </a>
+        <a class="pg-card link-card" href="https://www.vaticannews.va/en.html" target="_blank" rel="noopener">
+          <div class="pg-ico" aria-hidden="true">&#9672;</div>
+          <h3>Vatican News</h3>
+          <p data-i18n="pg.lnk.l2d">News from the Pope and the universal Church.</p>
+          <span class="link-go" data-i18n="pg.lnk.go">Visit site &rarr;</span>
+        </a>
+        <a class="pg-card link-card" href="https://www.usccb.org" target="_blank" rel="noopener">
+          <div class="pg-ico" aria-hidden="true">&#128214;</div>
+          <h3>USCCB</h3>
+          <p data-i18n="pg.lnk.l3d">The United States Conference of Catholic Bishops.</p>
+          <span class="link-go" data-i18n="pg.lnk.go">Visit site &rarr;</span>
+        </a>
+        <a class="pg-card link-card" href="https://archny.org" target="_blank" rel="noopener">
+          <div class="pg-ico" aria-hidden="true">&#10022;</div>
+          <h3 data-i18n="pg.lnk.l4t">Archdiocese of New York</h3>
+          <p data-i18n="pg.lnk.l4d">Our archdiocese &mdash; news, parishes, and resources.</p>
+          <span class="link-go" data-i18n="pg.lnk.go">Visit site &rarr;</span>
+        </a>
+        <a class="pg-card link-card" href="https://bible.usccb.org/readings/calendar" target="_blank" rel="noopener">
+          <div class="pg-ico" aria-hidden="true">&#10084;</div>
+          <h3 data-i18n="pg.lnk.l5t">Daily Readings</h3>
+          <p data-i18n="pg.lnk.l5d">Scripture readings for every day of the year.</p>
+          <span class="link-go" data-i18n="pg.lnk.go">Visit site &rarr;</span>
+        </a>
+        <a class="pg-card link-card" href="https://www.ewtn.com" target="_blank" rel="noopener">
+          <div class="pg-ico" aria-hidden="true">&#9670;</div>
+          <h3>EWTN</h3>
+          <p data-i18n="pg.lnk.l6d">Catholic television, radio, and news.</p>
+          <span class="link-go" data-i18n="pg.lnk.go">Visit site &rarr;</span>
+        </a>
+        <a class="pg-card link-card" href="https://catholiccharitiesny.org" target="_blank" rel="noopener">
+          <div class="pg-ico" aria-hidden="true">&#10010;</div>
+          <h3 data-i18n="pg.lnk.l7t">Catholic Charities NY</h3>
+          <p data-i18n="pg.lnk.l7d">Serving the poor and vulnerable across New York.</p>
+          <span class="link-go" data-i18n="pg.lnk.go">Visit site &rarr;</span>
+        </a>
       </div>
-
-      <div class="link-card">
-        <h3>Vatican News</h3>
-        <p>Daily news from the global Catholic Church.</p>
-        <a href="https://www.vaticannews.va/en.html" target="_blank">Visit Website</a>
-      </div>
-
-      <div class="link-card">
-        <h3>Catholic Online</h3>
-        <p>Saints, prayers, news, and Catholic resources.</p>
-        <a href="https://www.catholic.org" target="_blank">Visit Website</a>
-      </div>
-
-      <div class="link-card">
-        <h3>USCCB – Daily Readings</h3>
-        <p>Daily Bible readings from the U.S. Conference of Catholic Bishops.</p>
-        <a href="https://bible.usccb.org" target="_blank">Visit Website</a>
-      </div>
-
-      <div class="link-card">
-        <h3>Apostles of Jesus</h3>
-        <p>Missionary congregation founded in Uganda.</p>
-        <a href="http://www.apostlesofjesus.org" target="_blank">Visit Website</a>
-      </div>
-
-      <div class="link-card">
-        <h3>Christ in the Desert Monastery</h3>
-        <p>Benedictine monastery offering prayer and reflection.</p>
-        <a href="https://christdesert.org" target="_blank">Visit Website</a>
-      </div>
-
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© St. Angela Merici Catholic Church • Bronx, NY</p>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#mass-times" data-i18n="mass.title">Mass Times</a></li>
+        <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; <span id="year">2026</span> St. Angela Merici Catholic Church &bull; 917 Morris Avenue, Bronx, NY</p>
   </footer>
 
+  <script src="i18n.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
