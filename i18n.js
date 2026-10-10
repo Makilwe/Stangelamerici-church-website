@@ -1567,15 +1567,11 @@ var I18N = {
   var STORAGE_KEY = "sam-lang";
 
   function initialLanguage() {
+    // English is the first language (United States); a visitor's saved choice is honored.
     try {
       var saved = localStorage.getItem(STORAGE_KEY);
       if (saved && I18N[saved]) return saved;
     } catch (e) { /* storage unavailable */ }
-    var nav = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-    if (nav.indexOf("es") === 0) return "es";
-    if (nav.indexOf("fr") === 0) return "fr";
-    if (nav.indexOf("it") === 0) return "it";
-    if (nav.indexOf("pt") === 0) return "pt";
     return "en";
   }
 
