@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In Loving Memory – St. Angela Merici Catholic Church</title>
+  <meta name="description" content="In Loving Memory — the All Souls parish memorial of St. Angela Merici Catholic Church, Bronx, NY.">
+  <meta name="theme-color" content="#4b345f">
+  <meta property="og:title" content="St. Angela Merici Catholic Church – Bronx, NY">
+  <meta property="og:description" content="A joyful, welcoming Catholic community in the Bronx. Mass times, sacraments, ministries, and more.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+<style>
+.mem-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;margin-top:1.25rem}
+.mem-card{background:#fff;border:1px solid #e7dcc0;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(75,52,95,.08)}
+.mem-photo{width:100%;height:220px;object-fit:cover;display:block;background:#4b345f}
+.mem-initial{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#4b345f,#6b4f86)}
+.mem-initial span{font-size:4rem;color:#f7f3e8;font-family:Georgia,serif}
+.mem-body{padding:1rem 1.15rem 1.2rem}
+.mem-body h3{margin:0 0 .15rem;color:#4b345f}
+.mem-dates{margin:0 0 .6rem;color:#8a7a4a;font-size:.92rem}
+.mem-words{font-style:italic;color:#4b345f}
+.mem-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.9rem;align-items:center}
+.candle-btn{display:inline-flex;align-items:center;gap:.55rem;background:#f7f3e8;border:1px solid #b89b2d;border-radius:999px;padding:.45rem .95rem;cursor:pointer;color:#4b345f;font:inherit;transition:background .2s}
+.candle-btn:hover{background:#efe6cc}
+.candle-graphic{position:relative;width:16px;height:26px;display:inline-block}
+.wax{position:absolute;bottom:0;left:3px;width:10px;height:14px;background:#f3ead2;border:1px solid #d8c690;border-radius:2px}
+.wick{position:absolute;bottom:13px;left:7.5px;width:1.5px;height:4px;background:#5a4a2a}
+.flame{position:absolute;bottom:16px;left:4px;width:8px;height:11px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(circle at 50% 70%,#ffe9a8,#f5a623 70%,#d97b1e);opacity:.18;transform-origin:50% 100%}
+.candle-btn.lit .flame{opacity:1;animation:flick 1.6s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.12,1.2) rotate(2deg)}}
+.btn-small{padding:.45rem .95rem;font-size:.95rem}
+.mem-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin-top:1.25rem}
+.mem-step{background:#fff;border:1px solid #e7dcc0;border-radius:12px;padding:1.1rem 1.2rem}
+.mem-step .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:#b89b2d;color:#fff;font-weight:700;margin-bottom:.5rem}
+.mem-step h3{margin:.2rem 0 .35rem;color:#4b345f}
+.mem-form{max-width:640px;margin:1.25rem auto 0;background:#fff;border:1px solid #e7dcc0;border-radius:14px;padding:1.4rem}
+.mem-form label{display:block;font-weight:600;color:#4b345f;margin:.9rem 0 .3rem}
+.mem-form input,.mem-form textarea{width:100%;padding:.6rem .7rem;border:1px solid #d8c690;border-radius:8px;font:inherit;background:#fffdf7;box-sizing:border-box}
+.mem-form textarea{min-height:110px;resize:vertical}
+.mem-note{font-size:.92rem;color:#6b5b3a;margin-top:1rem}
+.mem-done{background:#eef7e8;border:1px solid #9cc184;border-radius:10px;padding:.9rem 1.1rem;margin-top:1rem;color:#2f5d23}
+.mem-quote{text-align:center;font-style:italic;color:#4b345f;font-size:1.15rem;margin:1.5rem 0 .5rem}
+.mem-count{text-align:center;color:#6b5b3a;margin-top:.4rem}
+</style>
+
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <!-- HEADER + NAVIGATION -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo-purple.png" alt="St. Angela Merici parish logo">
+        <div class="brand-text">
+          <h1>St. Angela Merici Catholic Church</h1>
+          <p data-i18n="brand.tag">Bronx, New York</p>
+        </div>
+      </div>
+      <div class="lang-switcher" role="group" aria-label="Language" data-i18n-aria="lang.label">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" data-i18n-aria="nav.toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span></label>
+      <nav class="navbar" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="ministries.html" data-i18n="nav.ministries">Ministries</a></li>
+          <li><a href="sacraments.html" data-i18n="nav.sacraments">Sacraments</a></li>
+          <li><a href="youth.html" data-i18n="nav.youth">Youth Corner</a></li>
+          <li><a href="readings.html" data-i18n="nav.readings">Daily Readings</a></li>
+          <li><a href="staff.html" data-i18n="nav.staff">Staff</a></li>
+          <li><a href="council.html" data-i18n="nav.council">Parish Council</a></li>
+          <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+          <li><a href="albums.html" data-i18n="nav.albums">Photo Albums</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="catholic-links.html" data-i18n="nav.links">Catholic Links</a></li>
+          <li><a href="giving.html" data-i18n="nav.giving">Giving</a></li>
+          <li><a href="events.html" data-i18n="nav.events">Events</a></li>
+          <li><a href="news.html" data-i18n="nav.news">News</a></li>
+          <li><a href="memorial.html" aria-current="page" data-i18n="nav.memorial">In Loving Memory</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="In Loving Memory">
+      <p class="eyebrow" data-i18n="mem.sub">All Souls Parish Memorial</p>
+      <h2 data-i18n="mem.title">In Loving Memory</h2>
+      <p class="mem-quote" data-i18n="mem.line">&ldquo;A life remembered is never lost.&rdquo;</p>
+      <p data-i18n="mem.intro">A quiet corner of our parish where families can share the faces and stories of those they love, especially during All Souls season.</p>
+    </section>
+
+    <!-- PARISH BOOK -->
+    <section class="section" aria-label="Parish book">
+      <p class="eyebrow center" data-i18n="mem.book.k">in loving memory</p>
+      <h2 class="center" data-i18n="mem.book.t">Our shared remembrance</h2>
+      <p class="center"><em data-i18n="mem.book.h">The parish book grows one story at a time.</em></p>
+      <p class="mem-count" id="memorial-count"></p>
+      <div id="memorial-grid" class="mem-grid" aria-live="polite"></div>
+      <p class="center mem-note" id="memorial-empty" data-i18n="mem.book.empty" hidden>No stories yet &mdash; the parish book grows one story at a time. Share the first one below.</p>
+      <p class="center mem-note" data-i18n="mem.book.note">These remembrances have been reviewed by our parish team and shared with their families&rsquo; care.</p>
+    </section>
+
+    <!-- GENTLE PROCESS -->
+    <section class="section-light" aria-label="How it works">
+      <p class="eyebrow center" data-i18n="mem.steps.k">A gentle process</p>
+      <h2 class="center" data-i18n="mem.steps.t">Your story is safe with us.</h2>
+      <div class="mem-steps">
+        <div class="mem-step"><span class="n">1</span><h3 data-i18n="mem.s1t">Share</h3><p data-i18n="mem.s1d">A photo and the words you want remembered.</p></div>
+        <div class="mem-step"><span class="n">2</span><h3 data-i18n="mem.s2t">Review</h3><p data-i18n="mem.s2d">A parish team member reads each submission.</p></div>
+        <div class="mem-step"><span class="n">3</span><h3 data-i18n="mem.s3t">Gather</h3><p data-i18n="mem.s3d">Approved remembrances become part of our book.</p></div>
+      </div>
+      <p class="mem-quote" data-i18n="mem.quote">&ldquo;To remember is to continue to love.&rdquo;</p>
+    </section>
+
+    <!-- SHARE FORM -->
+    <section class="section" aria-label="Share a story">
+      <h2 class="center" data-i18n="mem.form.t">Share a story</h2>
+      <form id="memorial-form" class="mem-form">
+        <label for="mem-name" data-i18n="mem.form.name">Their name</label>
+        <input id="mem-name" name="name" type="text" required autocomplete="off">
+        <label for="mem-dates" data-i18n="mem.form.dates">Dates (for example: 1940 &ndash; 2024)</label>
+        <input id="mem-dates" name="dates" type="text" autocomplete="off">
+        <label for="mem-words" data-i18n="mem.form.words">Words to remember them by</label>
+        <textarea id="mem-words" name="words" required></textarea>
+        <p class="mem-note" data-i18n="mem.form.photo">Photo &mdash; attach it in the email that opens.</p>
+        <p class="center" style="margin-top:1.1rem"><button class="btn-gold" type="submit" data-i18n="mem.form.send">Send to the parish team</button></p>
+        <p class="mem-note" data-i18n="mem.form.note">Your email app will open with everything filled in &mdash; just attach the photo and press send. The parish team reviews each submission before it appears.</p>
+        <p class="mem-done" id="memorial-done" data-i18n="mem.form.done" hidden>Thank you. The parish team will review your submission.</p>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="#mass-times" data-i18n="mass.title">Mass Times</a></li>
+        <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; <span id="year">2026</span> St. Angela Merici Catholic Church &bull; 917 Morris Avenue, Bronx, NY</p>
+  </footer>
+
+
+  <script src="i18n.js"></script>
+  <script src="memorial-data.js"></script>
+  <script src="memorial.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
