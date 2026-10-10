@@ -3,88 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parish Council – St. Angela Merici Catholic Church</title>
+  <title>Parish Council – St. Angela Merici Catholic Church – Bronx, NY</title>
+  <meta name="description" content="Parish Council of St. Angela Merici Catholic Church in the Bronx, NY — serving the good of the parish.">
+  <meta name="theme-color" content="#4b345f">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
-  <!-- HEADER -->
+  <!-- HEADER + NAVIGATION -->
   <header class="header">
-    <h1>Parish Council</h1>
-    <p>St. Angela Merici Catholic Church • Bronx, NY</p>
+    <div class="header-inner">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo-purple.png" alt="St. Angela Merici parish logo">
+        <div class="brand-text">
+          <h1>St. Angela Merici Catholic Church</h1>
+          <p data-i18n="brand.tag">Bronx, New York</p>
+        </div>
+      </div>
+      <div class="lang-switcher" role="group" aria-label="Language" data-i18n-aria="lang.label">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" data-i18n-aria="nav.toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span></label>
+      <nav class="navbar" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="ministries.html" data-i18n="nav.ministries">Ministries</a></li>
+          <li><a href="sacraments.html" data-i18n="nav.sacraments">Sacraments</a></li>
+          <li><a href="youth.html" data-i18n="nav.youth">Youth Corner</a></li>
+          <li><a href="readings.html" data-i18n="nav.readings">Daily Readings</a></li>
+          <li><a href="staff.html" data-i18n="nav.staff">Staff</a></li>
+          <li><a href="council.html" aria-current="page" data-i18n="nav.council">Parish Council</a></li>
+          <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+          <li><a href="albums.html" data-i18n="nav.albums">Photo Albums</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="catholic-links.html" data-i18n="nav.links">Catholic Links</a></li>
+          <li><a href="giving.html" data-i18n="nav.giving">Giving</a></li>
+          <li><a href="events.html" data-i18n="nav.events">Events</a></li>
+          <li><a href="news.html" data-i18n="nav.news">News</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- NAVIGATION -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="ministries.html">Ministries</a></li>
-      <li><a href="youth.html">Youth Corner</a></li>
-      <li><a href="readings.html">Daily Readings</a></li>
-      <li><a href="staff.html">Staff</a></li>
-      <li><a href="catholic-links.html">Catholic Links</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="council.html">Parish Council</a></li>
-    </ul>
-  </nav>
+  <main id="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Parish council">
+      <h2 data-i18n="pg.cou.title">Parish Council</h2>
+      <p data-i18n="pg.cou.sub">Serving the good of the parish.</p>
+    </section>
+    <!-- INTRO -->
+    <section class="section" aria-label="About the council">
+      <p class="center pg-lead" data-i18n="pg.cou.p1">
+        The Parish Council advises and supports the pastor in guiding the life of the parish &mdash;
+        its worship, ministries, and service to the community. Members are parishioners who give
+        their time and wisdom for the good of all.
+      </p>
+    </section>
+    <!-- PARISH COUNCIL -->
+    <section class="section-light" aria-label="Parish council members">
+      <h2 class="center" data-i18n="pg.cou.title">Parish Council</h2>
+      <div class="pg-grid">
+        <div class="pg-card staff-card">
+          <div class="staff-mono" aria-hidden="true">AB</div>
+          <h3>Alberto Bravo</h3>
+          <p class="staff-role" data-i18n="role.chair">Chairperson</p>
+        </div>
+        <div class="pg-card staff-card">
+          <div class="staff-mono" aria-hidden="true">DC</div>
+          <h3>Denise Cabrera</h3>
+          <p class="staff-role" data-i18n="role.secretary">Secretary</p>
+        </div>
+      </div>
+      <p class="center"><strong data-i18n="role.members">Members</strong>: Constance Ricks, Fiordaliza Inoa, Bienvenido &amp; Clara Hererra, Mary Luz Morel, Delfina Pena, Patricia Wright, Rosa Icela Cruz, Ignacio Veras of Ángel Sanchez</p>
 
-  <!-- CONTENT -->
-  <section class="section">
-    <h2 class="center">Spiritual Life Committee</h2>
-    <p class="center">
-      The Spiritual Life Committee supports liturgy, worship, and spiritual development in our parish.
-      They plan celebrations according to liturgical seasons and provide opportunities for prayer and
-      spiritual growth.
-    </p>
-  </section>
+    </section>
+    <!-- FINANCE COMMITTEE -->
+    <section class="section" aria-label="Finance committee">
+      <h2 class="center" data-i18n="sec.finance.t">Finance Committee</h2>
+      <div class="pg-grid">
+        <div class="pg-card staff-card">
+          <div class="staff-mono" aria-hidden="true">AF</div>
+          <h3>Antonio Falcón</h3>
+          <p class="staff-role" data-i18n="role.chair">Chairperson</p>
+        </div>
+        <div class="pg-card staff-card">
+          <div class="staff-mono" aria-hidden="true">DC</div>
+          <h3>Denise Cabrera</h3>
+          <p class="staff-role" data-i18n="role.vicechair">Vice-Chairperson</p>
+        </div>
+      </div>
+      <p class="center"><strong data-i18n="role.members">Members</strong>: Esmeralda Martínez, Alberto Bravo, Patricia Wright</p>
 
-  <section class="section-light">
-    <h2 class="center">Finance Council</h2>
+    </section>
+    <!-- TRUSTEES -->
+    <section class="section-light" aria-label="Trustees">
+      <h2 class="center" data-i18n="sec.trustees.t">Trustees</h2>
+      <div class="pg-grid">
+        <div class="pg-card staff-card">
+          <div class="staff-mono" aria-hidden="true">EA</div>
+          <h3>Edward Abreu</h3>
+        </div>
+        <div class="pg-card staff-card">
+          <div class="staff-mono" aria-hidden="true">CA</div>
+          <h3>Carlos Almonte</h3>
+        </div>
+        <div class="pg-card staff-card">
+          <div class="staff-mono" aria-hidden="true">NA</div>
+          <h3>Rev. Fr. Nestorio Agirembabazi, A.J.</h3>
+          <p class="staff-role" data-i18n="role.boardsec">Secretary for the Board</p>
+        </div>
+      </div>
+    </section>
+    <!-- LITURGICAL COMMITTEE -->
+    <section class="section" aria-label="Liturgical committee">
+      <h2 class="center" data-i18n="sec.liturgical.t">Liturgical Committee</h2>
+      <div class="pg-grid" style="max-width:420px;margin-inline:auto;">
+        <div class="pg-card staff-card">
+          <div class="staff-mono" aria-hidden="true">EP</div>
+          <h3>Estela Paulino</h3>
+          <p class="staff-role" data-i18n="role.chair">Chairperson</p>
+        </div>
+      </div>
+      <p class="center"><strong data-i18n="role.members">Members</strong>: Constance Ricks, Claudina García, Mayte Sierra, Delfina Peña, Rosa Icela Cruz, Edward Abreu, Ignacio Veras, Mary Luz Morel, Cristina Torres</p>
 
-    <div class="staff-card">
-      <h3>President: Antonio Falcon</h3>
-      <h3>Vice President: Denise Cabrera</h3>
-      <h3>Secretary: Julie Peña</h3>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2 class="center">Board of Trustees</h2>
-
-    <div class="staff-card">
-      <h3>Rev. Fr. Nestorio Agirembabazi, AJ</h3>
-      <p>Pastor • Secretary for the Board</p>
-    </div>
-  </section>
-
-  <section class="section-light">
-    <h2 class="center">Parish Council Members</h2>
-
-    <div class="staff-card">
-      <ul>
-        <li>Rev. Fr. Nestorio Agirembabazi, AJ – Pastor</li>
-        <li>Rev. Fr. Gaston K. Ampe, AJ – Vicar</li>
-        <li>Deacon Felipe Sin</li>
-        <li>Sister Maria Pagan, OBL – DRE</li>
-        <li>Julie Sierra</li>
-        <li>Denise Cabrera</li>
-        <li>Delfina Bruno</li>
-        <li>Icela Cruz</li>
-        <li>Dr. Patrick Iyahen</li>
-        <li>Patricia Wright</li>
-        <li>Connie Ricks</li>
-        <li>Mari Luz Morel</li>
-        <li>Fiordaliza Inoa</li>
-      </ul>
-    </div>
-  </section>
+      <div class="callout">
+        <h3 data-i18n="pg.cou.join.t">Get Involved</h3>
+        <p data-i18n="pg.cou.join.p">Parishioners who would like to serve on the council are welcome to speak with the parish office.</p>
+        <p><a class="btn" href="contact.html" data-i18n="nav.contact">Contact</a></p>
+      </div>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© St. Angela Merici Catholic Church • Bronx, NY</p>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#mass-times" data-i18n="mass.title">Mass Times</a></li>
+        <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; <span id="year">2026</span> St. Angela Merici Catholic Church &bull; 917 Morris Avenue, Bronx, NY</p>
   </footer>
 
+  <script src="i18n.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

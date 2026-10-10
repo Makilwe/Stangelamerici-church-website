@@ -3,80 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parish Ministries – St. Angela Merici</title>
+  <title>Ministries – St. Angela Merici Catholic Church – Bronx, NY</title>
+  <meta name="description" content="Ministries of St. Angela Merici Catholic Church in the Bronx, NY — serve at Mass and care for our community. There is a place for you here.">
+  <meta name="theme-color" content="#4b345f">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
-<header class="header">
-  <h1>St. Angela Merici Catholic Church</h1>
-  <p>Bronx, New York</p>
-</header>
+  <!-- HEADER + NAVIGATION -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo-purple.png" alt="St. Angela Merici parish logo">
+        <div class="brand-text">
+          <h1>St. Angela Merici Catholic Church</h1>
+          <p data-i18n="brand.tag">Bronx, New York</p>
+        </div>
+      </div>
+      <div class="lang-switcher" role="group" aria-label="Language" data-i18n-aria="lang.label">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" data-i18n-aria="nav.toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span></label>
+      <nav class="navbar" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="ministries.html" aria-current="page" data-i18n="nav.ministries">Ministries</a></li>
+          <li><a href="sacraments.html" data-i18n="nav.sacraments">Sacraments</a></li>
+          <li><a href="youth.html" data-i18n="nav.youth">Youth Corner</a></li>
+          <li><a href="readings.html" data-i18n="nav.readings">Daily Readings</a></li>
+          <li><a href="staff.html" data-i18n="nav.staff">Staff</a></li>
+          <li><a href="council.html" data-i18n="nav.council">Parish Council</a></li>
+          <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+          <li><a href="albums.html" data-i18n="nav.albums">Photo Albums</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="catholic-links.html" data-i18n="nav.links">Catholic Links</a></li>
+          <li><a href="giving.html" data-i18n="nav.giving">Giving</a></li>
+          <li><a href="events.html" data-i18n="nav.events">Events</a></li>
+          <li><a href="news.html" data-i18n="nav.news">News</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="ministries.html" class="active">Ministries</a></li>
-    <li><a href="youth.html">Youth Corner</a></li>
-    <li><a href="readings.html">Daily Readings</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <main id="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Ministries">
+      <h2 data-i18n="pg.min.title">Ministries</h2>
+      <p data-i18n="pg.min.sub">Share your time and talent.</p>
+    </section>
 
-<section class="section">
-  <h2 class="center">Parish Ministries</h2>
-  <p class="center">
-    Our parish is blessed with ministries that help us grow in faith, serve our community,
-    and live the Gospel with joy. All parishioners are welcome to participate.
-  </p>
-</section>
+    <!-- INTRO -->
+    <section class="section" aria-label="Introduction">
+      <p class="center pg-lead" data-i18n="pg.min.intro">
+        Our parish is blessed with many ministries that serve at Mass and care for our community.
+        There is a place for you here.
+      </p>
 
-<section class="section-light">
-  <h3 class="center">Liturgical Ministries</h3>
-  <p class="center">
-    • Lectors<br>
-    • Extraordinary Ministers of Holy Communion<br>
-    • Altar Servers<br>
-    • Choir & Music Ministry<br>
-    • Ushers & Greeters
-  </p>
-</section>
+      <div class="pg-grid">
+        <div class="pg-card">
+          <div class="pg-ico" aria-hidden="true">&#10013;</div>
+          <h3 data-i18n="pg.min.m1t">Eucharistic Ministers</h3>
+          <p data-i18n="pg.min.m1d">Extraordinary Ministers of Holy Communion assist at Mass and bring Communion to the sick and homebound.</p>
+          <p><span data-i18n="pg.min.leader">Leader</span>: <strong>Claudina Garcia</strong></p>
+        </div>
+        <div class="pg-card">
+          <div class="pg-ico" aria-hidden="true">&#10022;</div>
+          <h3 data-i18n="pg.min.m2t">Altar Servers</h3>
+          <p data-i18n="pg.min.m2d">Young people and adults who serve at the altar during Mass and special liturgies.</p>
+        </div>
+        <div class="pg-card">
+          <div class="pg-ico" aria-hidden="true">&#128214;</div>
+          <h3 data-i18n="pg.min.m3t">Lectors</h3>
+          <p data-i18n="pg.min.m3d">Proclaim the Word of God at Mass and parish celebrations.</p>
+        </div>
+        <div class="pg-card">
+          <div class="pg-ico" aria-hidden="true">&#119136;</div>
+          <h3 data-i18n="pg.min.m4t">Music Ministry</h3>
+          <p data-i18n="pg.min.m4d">Choirs and musicians lift our hearts in song at Sunday Masses in English and Spanish.</p>
+        </div>
+        <div class="pg-card">
+          <div class="pg-ico" aria-hidden="true">&#10084;</div>
+          <h3 data-i18n="pg.min.m5t">Youth Ministry</h3>
+          <p data-i18n="pg.min.m5d">Faith, friendship, and fun for our young people &mdash; every Friday at 6:00 PM in the lower church.</p>
+        </div>
+        <div class="pg-card">
+          <div class="pg-ico" aria-hidden="true">&#9672;</div>
+          <h3 data-i18n="pg.min.m6t">Ushers</h3>
+          <p data-i18n="pg.min.m6d">Welcome parishioners, help with seating, and care for the needs of the assembly.</p>
+        </div>
+        <div class="pg-card">
+          <div class="pg-ico" aria-hidden="true">&#10010;</div>
+          <h3 data-i18n="pg.min.m7t">Food Pantry</h3>
+          <p data-i18n="pg.min.m7d">Serving our neighbors in need. Contact the parish office for distribution days and ways to help.</p>
+        </div>
+        <div class="pg-card">
+          <div class="pg-ico" aria-hidden="true">&#128591;</div>
+          <h3 data-i18n="pg.min.m8t">Equipo Bautismal</h3>
+          <p data-i18n="pg.min.m8d">Preparation and celebration of baptisms in our parish.</p>
+          <p><span data-i18n="pg.min.leader">Leader</span>: <strong>Marcia Correa, Máximo Correa, Mariluz Morrel</strong></p>
+        </div>
+      </div>
 
-<section class="section">
-  <h3 class="center">Faith Formation</h3>
-  <p class="center">
-    • Religious Education (CCD)<br>
-    • Sacramental Preparation<br>
-    • Adult Faith Formation<br>
-    • RCIA (Rite of Christian Initiation for Adults)
-  </p>
-</section>
+      <div class="callout">
+        <h3 data-i18n="pg.min.join.t">Want to Get Involved?</h3>
+        <p data-i18n="pg.min.join.p">New volunteers are always welcome. Call the parish office at (718) 293-0984 and tell us where you&rsquo;d like to serve.</p>
+        <p><a class="btn" href="contact.html" data-i18n="nav.contact">Contact</a></p>
+      </div>
+    </section>
+  </main>
 
-<section class="section-light">
-  <h3 class="center">Service & Community</h3>
-  <p class="center">
-    • Food Pantry<br>
-    • Community Outreach<br>
-    • Parish Volunteers<br>
-    • Hospitality Ministry
-  </p>
-</section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#mass-times" data-i18n="mass.title">Mass Times</a></li>
+        <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; <span id="year">2026</span> St. Angela Merici Catholic Church &bull; 917 Morris Avenue, Bronx, NY</p>
+  </footer>
 
-<section class="section">
-  <h3 class="center">Youth & Family</h3>
-  <p class="center">
-    • Youth Group<br>
-    • Family Catechesis<br>
-    • Children’s Choir<br>
-    • Teen Service Projects
-  </p>
-</section>
-
-<footer class="footer">
-  <p>© St. Angela Merici Catholic Church • Bronx, NY</p>
-</footer>
-
+  <script src="i18n.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

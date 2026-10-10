@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Bulletin — Print — St. Angela Merici</title>
+<style>
+  /* ---------- screen ---------- */
+  body { font-family: Georgia, "Times New Roman", serif; color: #111; margin: 0; background: #f4f1e8; }
+  .toolbar {
+    background: #4b345f; color: #fff; padding: 0.9rem 1.2rem;
+    display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+    font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+  }
+  .toolbar h1 { font-size: 1rem; margin: 0; font-weight: 600; }
+  .toolbar p { margin: 0; font-size: 0.85rem; opacity: 0.85; }
+  .toolbar button {
+    background: #b89b2d; color: #4b345f; border: none; border-radius: 8px;
+    font-size: 1rem; font-weight: 700; padding: 0.6rem 1.4rem; cursor: pointer;
+  }
+  .toolbar button:hover { background: #dbb83e; }
+  .toolbar a { color: #fff; font-size: 0.9rem; }
+  .sheet {
+    background: #fff; max-width: 8.5in; margin: 1.5rem auto; padding: 0.9in 0.85in;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.15);
+  }
+  /* ---------- bulletin ---------- */
+  .b-head { text-align: center; border-bottom: 3px double #4b345f; padding-bottom: 0.7rem; margin-bottom: 1rem; }
+  .b-head h2 { margin: 0; font-size: 1.7rem; letter-spacing: 0.02em; color: #4b345f; }
+  .b-head .b-sub { margin: 0.25rem 0 0; font-size: 0.9rem; color: #444; }
+  .b-title { text-align: center; margin: 0 0 1.1rem; }
+  .b-title h3 { margin: 0; font-size: 1.35rem; color: #4b345f; }
+  .b-title p { margin: 0.2rem 0 0; font-style: italic; color: #555; }
+  .b-sec { margin: 0 0 1.1rem; }
+  .b-sec h4 {
+    margin: 0 0 0.45rem; font-size: 1.02rem; text-transform: uppercase;
+    letter-spacing: 0.08em; color: #4b345f; border-bottom: 1px solid #999; padding-bottom: 0.2rem;
+  }
+  .b-sec p { margin: 0 0 0.6rem; line-height: 1.55; font-size: 0.98rem; }
+  .b-sec ul { margin: 0 0 0.6rem; padding-left: 1.2rem; line-height: 1.55; font-size: 0.98rem; }
+  .b-schedule { display: table; width: 100%; font-size: 0.95rem; }
+  .b-schedule div { display: table-row; }
+  .b-schedule span { display: table-cell; padding: 0.15rem 0; }
+  .b-schedule span:first-child { font-weight: bold; width: 42%; }
+  .b-foot {
+    margin-top: 1.2rem; padding-top: 0.6rem; border-top: 3px double #4b345f;
+    text-align: center; font-size: 0.85rem; color: #444;
+  }
+  .b-error { max-width: 8.5in; margin: 2rem auto; padding: 1.5rem; background: #fff; border: 1px solid #c33; border-radius: 8px; font-family: -apple-system, "Segoe UI", Arial, sans-serif; }
+  /* ---------- print ---------- */
+  @page { size: letter; margin: 0.7in 0.75in; }
+  @media print {
+    body { background: #fff; }
+    .toolbar { display: none !important; }
+    .sheet { box-shadow: none; margin: 0; padding: 0; max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <h1>🖨 Sunday Bulletin — Print View</h1>
+  <p>Shows this week's bulletin from the parish Google Sheet. Press Print, or Ctrl+P.</p>
+  <button onclick="window.print()">Print bulletin</button>
+  <a href="bulletins.html">← Back to bulletins</a>
+</div>
+
+<div id="print-root"></div>
+
+<script src="bulletin-config.js"></script>
+<script>
+(function () {
+  "use strict";
+  var root = document.getElementById("print-root");
+  var URL = (typeof window.SHEET_CSV_URL === "string") ? window.SHEET_CSV_URL.trim() : "";
+
+  /* Sample shown until the Sheet is connected. */
+  var DEMO = [{
+    date: "2026-09-27",
+    sunday_title: "Twenty-Sixth Sunday in Ordinary Time",
+    announcements: "Weekday Masses: Monday–Friday at 1:00 PM (Bilingual); Thursday at 7:30 PM (Bilingual). Confessions: Saturdays 4:00–5:00 PM.\n\nOur Food Pantry serves the community — call the rectory at (718) 293-0984 for distribution days.",
+    intentions: "Sunday 10:00 AM — For the intentions of our parish family\nSunday 12:00 PM — In thanksgiving",
+    pdf_url: ""
+  }];
+
+  function parseCSV(text) {
+    var rows = [], row = [], field = "", q = false, i, c;
+    for (i = 0; i < text.length; i++) {
+      c = text[i];
+      if (q) {
+        if (c === '"') { if (text[i + 1] === '"') { field += '"'; i++; } else { q = false; } }
+        else { field += c; }
+      } else if (c === '"') { q = true; }
+      else if (c === ",") { row.push(field); field = ""; }
+      else if (c === "\r") { /* skip */ }
+      else if (c === "\n") { row.push(field); rows.push(row); row = []; field = ""; }
+      else { field += c; }
+    }
+    if (field !== "" || row.length) { row.push(field); rows.push(row); }
+    return rows;
+  }
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function paras(s) {
+    return String(s || "").split(/\n\s*\n/).map(function (p) {
+      return "<p>" + esc(p).replace(/\n/g, "<br>") + "</p>";
+    }).join("");
+  }
+  function fmtDate(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || "");
+    if (!m) return iso || "";
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    var d = new Date(+m[1], +m[2] - 1, +m[3]);
+    var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    return days[d.getDay()] + ", " + months[+m[2] - 1] + " " + (+m[3]) + ", " + m[1];
+  }
+
+  function render(b) {
+    var html =
+      '<div class="sheet">' +
+      '<div class="b-head"><h2>St. Angela Merici Catholic Church</h2>' +
+      '<p class="b-sub">917 Morris Ave, Bronx, NY 10451 &nbsp;•&nbsp; (718) 293-0984 &nbsp;•&nbsp; saintangelamerici@yahoo.com</p></div>' +
+      '<div class="b-title"><h3>' + esc(b.sunday_title || "Weekly Bulletin") + "</h3>" +
+      "<p>" + esc(fmtDate(b.date)) + "</p></div>" +
+
+      '<div class="b-sec"><h4>Mass Schedule</h4><div class="b-schedule">' +
+      "<div><span>Sunday</span><span>8:00 AM Spanish \u2014 9:30 AM English \u2014 11:00 AM Spanish</span></div>" +
+      "<div><span>Mon – Fri</span><span>1:00 PM — Bilingual</span></div>" +
+      "<div><span>Thursday</span><span>7:30 PM — Bilingual</span></div>" +
+      "<div><span>Confessions</span><span>Saturday 4:00 – 5:00 PM</span></div>" +
+      "</div></div>" +
+
+      '<div class="b-sec"><h4>Announcements</h4>' + (paras(b.announcements) || "<p>—</p>") + "</div>" +
+      '<div class="b-sec"><h4>Mass Intentions</h4>' + (paras(b.intentions) || "<p>—</p>") + "</div>" +
+
+      '<div class="b-foot">St. Angela Merici Catholic Church &nbsp;•&nbsp; 917 Morris Ave, Bronx, NY 10451<br>' +
+      "Rectory (718) 293-0984 &nbsp;•&nbsp; saintangelamerici@yahoo.com</div>" +
+      "</div>";
+    root.innerHTML = html;
+  }
+
+  function pickLatest(list) {
+    var ok = list.filter(function (b) { return /^\d{4}-\d{2}-\d{2}$/.test(b.date || ""); });
+    ok.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    return ok[0] || list[0];
+  }
+
+  function fromRows(rows) {
+    if (!rows.length) return [];
+    var h = rows[0].map(function (x) { return String(x).trim().toLowerCase(); });
+    function col(n) { var i = h.indexOf(n); return i < 0 ? function () { return ""; } : function (r) { return (r[i] || "").trim(); }; }
+    var cDate = col("date"), cTitle = col("sunday_title"), cAnn = col("announcements"), cInt = col("intentions"), cPdf = col("pdf_url");
+    return rows.slice(1).filter(function (r) { return r.length && r.some(function (x) { return String(x).trim() !== ""; }); })
+      .map(function (r) { return { date: cDate(r), sunday_title: cTitle(r), announcements: cAnn(r), intentions: cInt(r), pdf_url: cPdf(r) }; });
+  }
+
+  if (!URL) { render(pickLatest(DEMO)); return; }
+  fetch(URL, { cache: "no-store" }).then(function (res) {
+    if (!res.ok) throw new Error("http " + res.status);
+    return res.text();
+  }).then(function (text) {
+    var list = fromRows(parseCSV(text));
+    render(pickLatest(list.length ? list : DEMO));
+  }).catch(function () {
+    root.innerHTML = '<div class="b-error"><strong>Could not load the bulletin.</strong><br>' +
+      "Check that the Google Sheet is published to the web as CSV and the link in <code>bulletin-config.js</code> is correct.</div>";
+  });
+})();
+</script>
+</body>
+</html>

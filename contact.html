@@ -3,62 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us – St. Angela Merici</title>
+  <title>Contact – St. Angela Merici Catholic Church – Bronx, NY</title>
+  <meta name="description" content="Contact St. Angela Merici Catholic Church in the Bronx, NY — 917 Morris Avenue, (718) 293-0984, saintangelamerici@yahoo.com.">
+  <meta name="theme-color" content="#4b345f">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
-<header class="header">
-  <h1>St. Angela Merici Catholic Church</h1>
-  <p>Bronx, New York</p>
-</header>
+  <!-- HEADER + NAVIGATION -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo-purple.png" alt="St. Angela Merici parish logo">
+        <div class="brand-text">
+          <h1>St. Angela Merici Catholic Church</h1>
+          <p data-i18n="brand.tag">Bronx, New York</p>
+        </div>
+      </div>
+      <div class="lang-switcher" role="group" aria-label="Language" data-i18n-aria="lang.label">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" data-i18n-aria="nav.toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span></label>
+      <nav class="navbar" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="ministries.html" data-i18n="nav.ministries">Ministries</a></li>
+          <li><a href="sacraments.html" data-i18n="nav.sacraments">Sacraments</a></li>
+          <li><a href="youth.html" data-i18n="nav.youth">Youth Corner</a></li>
+          <li><a href="readings.html" data-i18n="nav.readings">Daily Readings</a></li>
+          <li><a href="staff.html" data-i18n="nav.staff">Staff</a></li>
+          <li><a href="council.html" data-i18n="nav.council">Parish Council</a></li>
+          <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+          <li><a href="albums.html" data-i18n="nav.albums">Photo Albums</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="catholic-links.html" data-i18n="nav.links">Catholic Links</a></li>
+          <li><a href="giving.html" data-i18n="nav.giving">Giving</a></li>
+          <li><a href="events.html" data-i18n="nav.events">Events</a></li>
+          <li><a href="news.html" data-i18n="nav.news">News</a></li>
+          <li><a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="ministries.html">Ministries</a></li>
-    <li><a href="youth.html">Youth Corner</a></li>
-    <li><a href="readings.html">Daily Readings</a></li>
-    <li><a href="contact.html" class="active">Contact</a></li>
-  </ul>
-</nav>
+  <main id="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Contact us">
+      <h2 data-i18n="ctc.title">Contact Us</h2>
+      <p data-i18n="pg.ctc.sub">We&rsquo;d love to hear from you.</p>
+    </section>
 
-<section class="section">
-  <h2 class="center">Contact Us</h2>
-  <p class="center">
-    We are here to serve you. Please reach out with any questions, prayer requests,
-    or needs. Our parish staff is happy to assist you.
-  </p>
-</section>
+    <!-- CONTACT CARDS -->
+    <section class="section" aria-label="Contact details">
+      <div class="contact-grid">
+        <div class="pg-card contact-card">
+          <div class="pg-ico" aria-hidden="true" style="margin-inline:auto;">&#9672;</div>
+          <h3 data-i18n="pg.ctc.visit.t">Visit Us</h3>
+          <address data-i18n="pg.ctc.addr">917 Morris Avenue<br>Bronx, NY 10451</address>
+        </div>
+        <div class="pg-card contact-card">
+          <div class="pg-ico" aria-hidden="true" style="margin-inline:auto;">&#9742;</div>
+          <h3 data-i18n="pg.ctc.call.t">Call Us</h3>
+          <p><a href="tel:+17182930984">(718) 293-0984</a></p>
+          <p data-i18n="pg.ctc.fax">Fax: (718) 293-7323</p>
+        </div>
+        <div class="pg-card contact-card">
+          <div class="pg-ico" aria-hidden="true" style="margin-inline:auto;">&#9993;</div>
+          <h3 data-i18n="pg.ctc.email.t">Email Us</h3>
+          <p><a href="mailto:saintangelamerici@yahoo.com">saintangelamerici@yahoo.com</a></p>
+        </div>
+        <div class="pg-card contact-card">
+          <div class="pg-ico" aria-hidden="true" style="margin-inline:auto;">&#128336;</div>
+          <h3 data-i18n="pg.ctc.hours.t">Office Hours</h3>
+          <p data-i18n="pg.ctc.h1">Monday &ndash; Friday: 9:00 AM &ndash; 6:00 PM</p>
+          <p data-i18n="pg.ctc.h2">Saturday: 9:00 AM &ndash; 12:00 PM</p>
+        </div>
+      </div>
 
-<section class="section-light">
-  <h3 class="center">Parish Information</h3>
-  <p class="center">
-    St. Angela Merici Catholic Church<br>
-    917 Morris Avenue<br>
-    Bronx, NY 10451<br><br>
+      <div class="contact-actions">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=917+Morris+Avenue+Bronx+NY+10451" target="_blank" rel="noopener" data-i18n="pg.ctc.dir">Get Directions</a>
+        <a class="btn btn-light" href="mailto:saintangelamerici@yahoo.com" data-i18n="pg.ctc.email.t">Email Us</a>
+      </div>
 
-    Phone: (718) 293-0984<br>
-    Email: saintangelamerici@yahoo.com
-  </p>
-</section>
+      <p class="center pg-note" data-i18n="pg.ctc.note">
+        For Mass intentions, sacrament arrangements, or any question at all, please reach out &mdash; we are glad to help.
+      </p>
+    </section>
+  </main>
 
-<section class="section">
-  <h3 class="center">Send Us a Message</h3>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#mass-times" data-i18n="mass.title">Mass Times</a></li>
+        <li><a href="bulletins.html" data-i18n="nav.bulletins">Bulletins</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; <span id="year">2026</span> St. Angela Merici Catholic Church &bull; 917 Morris Avenue, Bronx, NY</p>
+  </footer>
 
-  <form class="contact-form">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<footer class="footer">
-  <p>© St. Angela Merici Catholic Church • Bronx, NY</p>
-</footer>
-
+  <script src="i18n.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
